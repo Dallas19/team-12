@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { TopComponent } from './components/top/top.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TopComponent } from './components/top/top.component';
     BrowserAnimationsModule,
     MatButtonModule,
     FlexLayoutModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
