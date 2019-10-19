@@ -20,4 +20,4 @@ import { BinaryOptionComponent } from './components/binaryoptions/binary-option.
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
