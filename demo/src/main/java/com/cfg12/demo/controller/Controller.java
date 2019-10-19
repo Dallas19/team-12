@@ -27,7 +27,7 @@ public class Controller {
     public String sendMessage() {
         Twilio.init(keys.getACCOUNT_SID(), keys.getAUTH_TOKEN());
         Message.creator(new PhoneNumber("2143545125"), new PhoneNumber("2055572680"),
-                "Message from Spring Boot Application").create();
+                "There is an emergency medical alert from Canine Assistants!").create();
         return "Message sent yo";
     }
 }
