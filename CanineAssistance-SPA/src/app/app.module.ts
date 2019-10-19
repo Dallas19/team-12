@@ -5,17 +5,24 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BinaryOptionComponent } from './components/binaryoptions/binary-option.component';
+import { HomeComponent } from './components/home/home.component';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './routes';
+import { TopComponent } from './components/top/top.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BinaryOptionComponent
+    BinaryOptionComponent,
+    HomeComponent,
+    TopComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
