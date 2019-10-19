@@ -1,0 +1,17 @@
+.center {
+    text-align: center;
+  }
+
+.big-button {
+    margin-left: 40px;
+    margin-right: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+.img-size {
+    width: 400px;
+    height: 400px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
