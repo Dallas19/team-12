@@ -1,9 +1,10 @@
 <div class="center">
     <p> The current condition is: {{ states[currentState] }}</p>
+    <img *ngIf="currentState==0" class="img-size" src="https://cdn.onlinewebfonts.com/svg/img_149898.png" alt="down">
+    <img *ngIf="currentState==1" class="img-size" src="https://www.nicepng.com/png/full/20-207227_up-arrow-white-up-arrow-png.png" alt="up">
         <div>
-            <img style="float: left;" class="img-size" src="https://www.affinitytranslation.com/wp-content/uploads/2014/07/no.2.jpg" alt="no" (click)='no()'>
-
-            <img style="float: right;" class="img-size" src="https://pbs.twimg.com/profile_images/2251474417/yesBlue_400x400.png" alt="yes" (click)='yes()'>
+            <img style="float: left;" class="img-size" src="https://pbs.twimg.com/profile_images/2251474417/yesBlue_400x400.png" alt="yes" (click)='yes()'>
+            <img style="float: right;" class="img-size" src="https://www.affinitytranslation.com/wp-content/uploads/2014/07/no.2.jpg" alt="no" (click)='no()'>
         </div>
 
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-binary-option',
@@ -8,9 +9,13 @@ import { Component } from '@angular/core';
 export class BinaryOptionComponent {
   title = 'CanineAssistance-SPA';
 
-  states = ['state1', 'state2', 'state3', 'state4'];
+  states = ['Low Blood Sugar', 'High Blood Sugar'];
+  //statePicture = ["https://cdn.onlinewebfonts.com/svg/img_149898.png", "https://www.nicepng.com/png/full/20-207227_up-arrow-white-up-arrow-png.png"]
   currentState = 0;
 
+constructor(private router: Router) {
+
+}
   incrementCondition() {
     this.currentState += 1;
 }
@@ -20,12 +25,10 @@ export class BinaryOptionComponent {
   }
 
   no() {
-    if (this.currentState < this.states.length) {
+    if (this.currentState < this.states.length-1) {
         this.incrementCondition();
     } else {
-        console.log('End of states');
+        this.router.navigate(['../home']);
     }
   }
 }
-
-

@@ -9,16 +9,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent {
 
+    private REST_API_SERVER = "http://localhost:8080";
     testResult: any;
-    constructor(private router: Router, private http: HttpClient) {
+    constructor(private router: Router, private httpClient: HttpClient) {
 
     }
     test() {
-      this.http.get('/users')
+      this.httpClient.get('http://localhost:8080/users')
         .subscribe(result => {
           this.testResult = result;
         });
+        console.log("4");
         console.log(this.testResult);
+        console.log("5");
     }
 
     medicalAttention() {
@@ -26,7 +29,8 @@ export class HomeComponent {
         console.log("1");
         this.test();
         console.log("2");
-        this.http.get('/alert')
+        this.httpClient.get('http://localhost:8080/alert')
+        console.log("3");
         this.router.navigate(['/binaryoptions']);
     }
 
